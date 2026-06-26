@@ -1,0 +1,323 @@
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐝 Guardião dos Polinizadores - Agro Sustentável</title>
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Mapeamento de Biodiversidade - Como os polinizadores aumentam a produtividade do agro">
+    <meta name="theme-color" content="#2E7D32">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <!-- Elemento autoral: Logo criado com CSS puro -->
+                <div class="logo-autoral">
+                    <span class="logo-icon">🐝</span>
+                    <span class="logo-text">Guardião dos Polinizadores</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#fazenda" class="nav-link active">Fazenda</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#dados" class="nav-link">Dados</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção de Boas-vindas com Mensagem Dinâmica -->
+        <section id="boas-vindas" class="section-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>🌱 Equilíbrio entre Produção e Meio Ambiente</h1>
+                    <div id="mensagem-dinamica" class="mensagem-sazonal">
+                        <!-- Mensagem gerada pelo JavaScript -->
+                    </div>
+                    <p class="hero-subtitle">Passe o mouse sobre as áreas da fazenda para descobrir o impacto dos polinizadores</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa Interativo da Fazenda -->
+        <section id="fazenda" class="section-fazenda">
+            <div class="container">
+                <h2 class="section-title">🌾 Mapeamento da Biodiversidade</h2>
+                <p class="section-subtitle">Interaja com as áreas da propriedade e descubra como os polinizadores aumentam a produtividade</p>
+                
+                <div class="fazenda-grid">
+                    <!-- Área 1: Plantação de Frutas -->
+                    <div class="area-interativa" id="area-frutas" data-area="frutas">
+                        <div class="area-card">
+                            <div class="area-icon">🍎</div>
+                            <h3>Pomar de Frutas</h3>
+                            <div class="area-stats">
+                                <span class="stat">Produtividade: <strong>85%</strong></span>
+                                <span class="stat">Polinizadores: <strong>Alta</strong></span>
+                            </div>
+                            <!-- Tooltip que será exibida no hover -->
+                            <div class="tooltip-area">
+                                <div class="tooltip-content">
+                                    <h4>🐝 Impacto dos Polinizadores</h4>
+                                    <p class="tooltip-text">As abelhas aumentam a produção de frutas em até <strong>30%</strong>!</p>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Produção atual:</span>
+                                        <span class="metric-value" id="producao-frutas">2.450 kg/ha</span>
+                                    </div>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Com polinização:</span>
+                                        <span class="metric-value">3.185 kg/ha</span>
+                                    </div>
+                                    <div class="tooltip-beneficio">
+                                        <span>🌼 +30% de produção</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Área 2: Reserva Legal (Mata Nativa) -->
+                    <div class="area-interativa" id="area-reserva" data-area="reserva">
+                        <div class="area-card">
+                            <div class="area-icon">🌳</div>
+                            <h3>Reserva Legal</h3>
+                            <div class="area-stats">
+                                <span class="stat">Biodiversidade: <strong>Excelente</strong></span>
+                                <span class="stat">Espécies: <strong>120+</strong></span>
+                            </div>
+                            <div class="tooltip-area">
+                                <div class="tooltip-content">
+                                    <h4>🌿 Conexão com a Produção</h4>
+                                    <p class="tooltip-text">A mata nativa abriga <strong>85%</strong> dos polinizadores da região!</p>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Espécies de abelhas:</span>
+                                        <span class="metric-value">47 espécies</span>
+                                    </div>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Raio de influência:</span>
+                                        <span class="metric-value">2.5 km</span>
+                                    </div>
+                                    <div class="tooltip-beneficio">
+                                        <span>🔄 Polinização cruzada garantida</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Área 3: Área de Cultivo de Grãos -->
+                    <div class="area-interativa" id="area-graos" data-area="graos">
+                        <div class="area-card">
+                            <div class="area-icon">🌾</div>
+                            <h3>Plantio de Grãos</h3>
+                            <div class="area-stats">
+                                <span class="stat">Produtividade: <strong>72%</strong></span>
+                                <span class="stat">Polinizadores: <strong>Média</strong></span>
+                            </div>
+                            <div class="tooltip-area">
+                                <div class="tooltip-content">
+                                    <h4>🌽 Benefícios da Polinização</h4>
+                                    <p class="tooltip-text">A proximidade com a reserva aumenta a produtividade em <strong>25%</strong></p>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Produção atual:</span>
+                                        <span class="metric-value">4.200 kg/ha</span>
+                                    </div>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Com polinização:</span>
+                                        <span class="metric-value">5.250 kg/ha</span>
+                                    </div>
+                                    <div class="tooltip-beneficio">
+                                        <span>🌻 +1.050 kg/ha</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Área 4: Apiário -->
+                    <div class="area-interativa" id="area-apiario" data-area="apiario">
+                        <div class="area-card">
+                            <div class="area-icon">🏠</div>
+                            <h3>Apiário</h3>
+                            <div class="area-stats">
+                                <span class="stat">Colmeias: <strong>35</strong></span>
+                                <span class="stat">Produção mel: <strong>Alta</strong></span>
+                            </div>
+                            <div class="tooltip-area">
+                                <div class="tooltip-content">
+                                    <h4>🍯 Produção e Sustentabilidade</h4>
+                                    <p class="tooltip-text">Cada colmeia poliniza até <strong>3 hectares</strong> de plantação</p>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Mel produzido:</span>
+                                        <span class="metric-value">2.800 kg/ano</span>
+                                    </div>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Área polinizada:</span>
+                                        <span class="metric-value">105 hectares</span>
+                                    </div>
+                                    <div class="tooltip-beneficio">
+                                        <span>💰 R$ 42.000/ano em mel</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Área 5: Corredor Ecológico -->
+                    <div class="area-interativa" id="area-corredor" data-area="corredor">
+                        <div class="area-card">
+                            <div class="area-icon">🦋</div>
+                            <h3>Corredor Ecológico</h3>
+                            <div class="area-stats">
+                                <span class="stat">Conexão: <strong>Ativa</strong></span>
+                                <span class="stat">Espécies: <strong>65+</strong></span>
+                            </div>
+                            <div class="tooltip-area">
+                                <div class="tooltip-content">
+                                    <h4>🔄 Conectividade da Paisagem</h4>
+                                    <p class="tooltip-text">Conecta a reserva ao pomar, aumentando a diversidade de polinizadores</p>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Espécies circulantes:</span>
+                                        <span class="metric-value">32 espécies</span>
+                                    </div>
+                                    <div class="tooltip-metric">
+                                        <span class="metric-label">Taxa de polinização:</span>
+                                        <span class="metric-value">95%</span>
+                                    </div>
+                                    <div class="tooltip-beneficio">
+                                        <span>🌺 Biodiversidade em movimento</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicadores Gerais -->
+                <div class="indicadores-gerais">
+                    <div class="indicador-card">
+                        <span class="indicador-icon">📊</span>
+                        <div class="indicador-info">
+                            <span class="indicador-valor" id="total-producao">0</span>
+                            <span class="indicador-label">Produção Total (kg/ha)</span>
+                        </div>
+                    </div>
+                    <div class="indicador-card">
+                        <span class="indicador-icon">🐝</span>
+                        <div class="indicador-info">
+                            <span class="indicador-valor" id="total-polinizadores">0</span>
+                            <span class="indicador-label">Espécies de Polinizadores</span>
+                        </div>
+                    </div>
+                    <div class="indicador-card">
+                        <span class="indicador-icon">🌱</span>
+                        <div class="indicador-info">
+                            <span class="indicador-valor" id="area-verde">0</span>
+                            <span class="indicador-label">Área Preservada (ha)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre o Projeto -->
+        <section id="sobre" class="section-sobre">
+            <div class="container">
+                <div class="sobre-content">
+                    <div class="sobre-texto">
+                        <h2>🌍 Por que isso importa?</h2>
+                        <p>Os polinizadores são responsáveis por <strong>75%</strong> da produção mundial de alimentos. Este projeto demonstra como a preservação ambiental e a agricultura podem andar juntas.</p>
+                        <ul class="lista-beneficios">
+                            <li>✅ Aumento da produtividade agrícola</li>
+                            <li>✅ Preservação da biodiversidade</li>
+                            <li>✅ Geração de renda com produtos sustentáveis</li>
+                            <li>✅ Equilíbrio entre produção e meio ambiente</li>
+                        </ul>
+                        <div class="texto-autoral">
+                            <p><em>"Como agricultor da 4ª geração, aprendi que a terra nos dá mais quando cuidamos dela. As abelhas são nossas parceiras mais valiosas na construção de um futuro sustentável."</em></p>
+                            <p class="autor">— João da Silva, Agricultor Familiar</p>
+                        </div>
+                    </div>
+                    <div class="sobre-imagem">
+                        <div class="grafico-sustentabilidade">
+                            <h4>Impacto dos Polinizadores</h4>
+                            <div class="barra-container">
+                                <div class="barra-item">
+                                    <span>Sem polinização</span>
+                                    <div class="barra-fundo">
+                                        <div class="barra-preenchimento" style="width: 45%"></div>
+                                    </div>
+                                    <span>45%</span>
+                                </div>
+                                <div class="barra-item">
+                                    <span>Com polinização</span>
+                                    <div class="barra-fundo">
+                                        <div class="barra-preenchimento" style="width: 95%"></div>
+                                    </div>
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Dados -->
+        <section id="dados" class="section-dados">
+            <div class="container">
+                <h2>📈 Dados de Sustentabilidade</h2>
+                <div class="dados-grid">
+                    <div class="dado-item">
+                        <span class="dado-numero">70%</span>
+                        <span class="dado-descricao">das culturas dependem de polinizadores</span>
+                    </div>
+                    <div class="dado-item">
+                        <span class="dado-numero">R$ 43 bi</span>
+                        <span class="dado-descricao">valor anual da polinização no Brasil</span>
+                    </div>
+                    <div class="dado-item">
+                        <span class="dado-numero">500+</span>
+                        <span class="dado-descricao">espécies de abelhas nativas do Brasil</span>
+                    </div>
+                    <div class="dado-item">
+                        <span class="dado-numero">30%</span>
+                        <span class="dado-descricao">aumento na produção com polinizadores</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="footer-logo">🐝 Guardião dos Polinizadores</span>
+                    <p>Projeto Agrinho 2026 - Agro Forte, Futuro Sustentável</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#fazenda">Fazenda</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#dados">Dados</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 - Desenvolvido com 💚 pela agricultura sustentável</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Externo -->
+    <script src="js/script.js"></script>
+</body>
+</html>
